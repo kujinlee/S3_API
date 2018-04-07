@@ -1,0 +1,17 @@
+# Getting started
+
+This project uses the Gradle build tool and includes a wrapper script that will download Gradle if you don't already have it.
+
+Dependencies are listed in the `build.gradle` file. You shouldn't need to add any additional dependencies to complete the task, though you are welcome to.
+
+The project runs the Spring Boot web starter template and includes the Spring MVC library.
+
+You can import the project into an IDE like IntelliJ, or you can edit source code in your favorite text editor and build and test from the command line:
+
+`./gradlew bootRun` - starts the server listening on port 8080
+
+`./gradlew compileJava` - compiles the Java source code
+
+`./gradlew test` - runs the test cases
+
+`./gradlew clean` - cleans the build directory
