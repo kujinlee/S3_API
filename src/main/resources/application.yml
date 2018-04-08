@@ -4,6 +4,7 @@ bucket-name: kyndi-exercise
 aws-access-key: AKIAJPG4TT7TRTCJWHEA
 aws-secret-key: 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
 
-max-cache-size-bytes: 1000000 # 1MB
+#1MB
+max-cache-size-bytes: 1000000
 
 cache-path: /tmp/cache/

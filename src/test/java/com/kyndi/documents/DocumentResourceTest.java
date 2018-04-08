@@ -63,5 +63,12 @@ public class DocumentResourceTest {
         .andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_PDF_VALUE));
   }
+  
+  @Test
+  public void testLargeDocumentDownloadEndpoint() throws Exception {
+    this.mockMvc.perform(get("/documents/"+largePdfFileName).accept(MediaType.APPLICATION_PDF_VALUE))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_PDF_VALUE));
+  }
 
 }
