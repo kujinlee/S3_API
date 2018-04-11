@@ -1,4 +1,4 @@
-package com.kyndi.documents;
+package com.sample.documents;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -15,8 +15,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import com.sample.documents.Application;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(
@@ -42,8 +45,8 @@ public class DocumentResourceTest {
     this.mockMvc.perform(get("/documents").accept(MediaType.APPLICATION_JSON_UTF8_VALUE))
         .andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-        .andExpect(jsonPath("$.results").isArray())
-        .andExpect(jsonPath("$.count").value(133));
+        .andExpect(jsonPath("$[*]").isArray())
+        .andExpect(jsonPath("$.length()").value(133));
   }
 
   @Test

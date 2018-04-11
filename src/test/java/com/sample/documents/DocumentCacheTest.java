@@ -1,4 +1,4 @@
-package com.kyndi.documents;
+package com.sample.documents;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -14,7 +14,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.kyndi.documents.CacheResult.CacheOperation;
+import com.sample.documents.Application;
+import com.sample.documents.CacheResult;
+import com.sample.documents.DocumentCache;
+import com.sample.documents.DocumentService;
+import com.sample.documents.CacheResult.CacheOperation;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(

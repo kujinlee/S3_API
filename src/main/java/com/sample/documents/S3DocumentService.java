@@ -1,4 +1,4 @@
-package com.kyndi.documents;
+package com.sample.documents;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

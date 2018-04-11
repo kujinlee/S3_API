@@ -1,4 +1,4 @@
-package com.kyndi.documents;
+package com.sample.documents;
 
 import java.io.InputStream;
 import java.util.List;
